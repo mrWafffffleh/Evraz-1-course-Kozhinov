@@ -3,24 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link
+            rel="stylesheet"
+            href="Задачи%208.5.css"
+    >
 </head>
 <body>
-<button id="clear" onclick="clear2()">Очистить все</button>
+<button id="clear" onclick="clear1212()">Очистить все</button>
 <div>
-  <input id="input1" type="text">
-  <button id="add1" onclick="add1()">Добавить текст</button>
+  <input id="input_blue" type="text">
+  <button id="add_blue" onclick="add_blue()">Добавить текст в синий блок</button>
 </div>
 <div>
-  <input id="input2" type="text">
-  <button id="add2" onclick="add2()">Добавить текст</button>
+  <input id="input_red" type="text">
+  <button id="add_red" onclick="add_red()">Добавить текст в красный блок</button>
 </div>
 <div>
-  <input id="input3" type="text">
-  <button id="add3" onclick="add3()">Добавить текст</button>
+  <input id="input_green" type="text">
+  <button id="add_green" onclick="add_green()">Добавить текст в зеленый блок</button>
 </div>
-<div style="background-color: rgba(255,0,0,0.85); display: inline-block;"></div>
-<div style="background-color: rgba(72,255,0,0.85); display: inline-block"></div>
-<div style="background-color: rgba(0,42,255,0.81); display: inline-block"></div>
 
+<div id="red">
+    <span id="span_red"></span>
+</div>
+<div id="green">
+    <span id="span_green"></span>
+</div>
+<div id="blue">
+    <span id="span_blue"></span>
+</div>
+
+<script src="Задачи%208.5.js"></script>
 </body>
 </html>

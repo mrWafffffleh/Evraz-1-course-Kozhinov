@@ -1,0 +1,53 @@
+#red{
+    background-color: rgba(255,0,0,0.46);
+    display: inline-block;
+    position: absolute;
+    width: 33%;
+    height: 50%;
+    top: 25%;
+}
+#green{
+    background-color: rgba(72,255,0,0.46);
+    display: inline-block;
+    position: absolute;
+    width: 33%;
+    height: 50%;
+    top: 25%;
+    left: 33.5%;
+}
+#blue{
+    background-color: rgba(51,83,255,0.46);
+    display: inline-block;
+    position: absolute;
+    width: 33%;
+    height: 50%;
+    top: 25%;
+    left: 66.5%;
+}
+#block1{
+    display: inline-block;
+    position: absolute;
+    top: 18%;
+}
+#block2{
+    display: inline-block;
+    position: absolute;
+    top: 18%;
+    left: 34%;
+}
+#block3{
+    display: inline-block;
+    position: absolute;
+    top: 18%;
+    left: 67%;
+}
+#add_block{
+    display: inline-block;
+    position: absolute;
+    top: 77%
+}
+#last_block{
+    display: inline-block;
+    position: absolute;
+    top: 80%;
+}

@@ -1,0 +1,38 @@
+#add_blue {
+    color: blue;
+}
+#add_red{
+    color: red;
+}
+#add_green{
+    color: green;
+}
+#red{
+    background-color: rgba(255,0,0,0.46);
+    display: inline-block;
+    position: absolute;
+    width: 33%;
+    height: 50%;
+    top: 25%;
+}
+#green{
+    background-color: rgba(72,255,0,0.46);
+    display: inline-block;
+    position: absolute;
+    width: 33%;
+    height: 50%;
+    top: 25%;
+    left: 33.5%;
+}
+#blue{
+    background-color: rgba(51,83,255,0.46);
+    display: inline-block;
+    position: absolute;
+    width: 33%;
+    height: 50%;
+    top: 25%;
+    left: 66.5%;
+}
+/*style="background-color: rgba(255,0,0,0.46); display: inline-block; position: absolute; width: 33%; height: 50%; top: 25%"*/
+/*style="background-color: rgba(72,255,0,0.46); display: inline-block; position: absolute; width: 33%; height: 50%; top: 25%; left: 33.5%"*/
+/*style="background-color: rgba(51,83,255,0.46); display: inline-block; position: absolute; width: 33%; height: 50%; top: 25%; left: 66.5%"*/

@@ -8,17 +8,17 @@ let input = document.getElementById("input")
 
 function add_text() {
     let text = prompt("Укажите номер блока, куда добавить текст");
-    if (text == 1) {
+    if (text === 1) {
         span_red.innerText = span_red.innerText + input.value
         input.value = ""
 
     }
-    else if (text == 2) {
+    else if (text === 2) {
         span_green.innerText = span_green.innerText + input.value
         input.value = ""
 
     }
-    else if (text == 3) {
+    else if (text === 3) {
         span_blue.innerText = span_blue.innerText + input.value
         input.value = ""
 

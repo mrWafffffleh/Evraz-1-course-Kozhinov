@@ -1,0 +1,27 @@
+#button_gold{
+    color: gold;
+}
+#button_blue{
+    color: turquoise;
+}
+#button_orange{
+    color: orange;
+}
+.button.blue{
+    background-color: turquoise;
+}
+.button.gold{
+    background-color: gold;
+}
+.button.orange{
+    background-color: orange;
+}
+#gold{
+    background-color: gold;
+    display: inline-block;
+    position: absolute;
+    width: 33%;
+    height: 50%;
+    top: 25%;
+    left: 25%;
+}

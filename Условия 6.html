@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="Условия%206.css">
+</head>
+<body>
+<span>
+    <button onclick="butgold()" id="button_gold">Выбрать золотой блок</button>
+    <button onclick="butlue()" id="button_blue">Выбрать бирюзовый блок</button>
+    <button onclick="butorange()" id="button_orange">Выбрать оранжевый блок</button>
+</span>
+<div> <span>Текущий шаг:</span>
+    <span id="step"></span>
+    <button id="add1" onclick="add1()">+1</button>
+    <button id="add5" onclick="add5()">+5</button>
+    <button id="add10" onclick="add10()">+10</button>
+    <button id="add50" onclick="add50()">+50</button>
+    <button id="del1" onclick="add1()">-1</button>
+    <button id="del5" onclick="add1()">-5</button>
+    <button id="del10" onclick="add1()">-10</button>
+    <button id="del50" onclick="add1()">-50</button>
+</div>
+<span>
+    <button id="button_left" onclick="button_left()">Подвинуть блок влево</button>
+    <button id="button_up" onclick="button_up()">Подвинуть блок вверх</button>
+    <button id="button_right" onclick="button_right()">Подвинуть блок вправо</button>
+    <button id="button_down" onclick="button_down()">Подвинуть блок вниз</button>
+</span>
+<div id="gold">
+    <span id="span_red"></span>
+</div>
+
+<div id="blue">
+    <span id="span_green"></span>
+</div>
+
+<div id="orange">
+    <span id="span_blue"></span>
+</div>
+
+
+
+
+<script src="Условия%206.js"></script>
+</body>
+</html>

@@ -7,21 +7,42 @@
 #button_orange{
     color: orange;
 }
-.button.blue{
+.button.blue button{
     background-color: turquoise;
 }
-.button.gold{
+.button.gold button{
     background-color: gold;
 }
-.button.orange{
+.button.orange button{
     background-color: orange;
 }
 #gold{
     background-color: gold;
     display: inline-block;
     position: absolute;
-    width: 33%;
-    height: 50%;
-    top: 25%;
-    left: 25%;
+    width: 200px;
+    height: 200px;
+    top: 95px;
+    left: 0%;
+}
+#blue{
+    background-color: turquoise;
+    display: inline-block;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 95px;
+    left: 230px;
+}
+#orange{
+    background-color: orange;
+    display: inline-block;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 95px;
+    left: 460px;
+}
+.block.border {
+
 }

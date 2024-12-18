@@ -23,7 +23,7 @@
     width: 200px;
     height: 200px;
     top: 95px;
-    left: 0%;
+    left: 0;
 }
 #blue{
     background-color: turquoise;
@@ -46,4 +46,25 @@
 .block.border {
     box-sizing: border-box;
     border: 5px solid rgba(0, 0, 0, 0.56);
+    border-radius: 10px;
+}
+.block.left_border {
+    box-sizing: border-box;
+    border-left: 5px solid rgb(255, 0, 0);
+    border-radius: 10px;
+}
+.block.right_border{
+    box-sizing: border-box;
+    border-right: 5px solid rgb(255, 0, 0);
+    border-radius: 10px;
+}
+.block.top_border{
+    box-sizing: border-box;
+    border-top: 5px solid rgb(255, 0, 0);
+    border-radius: 10px;
+}
+.block.bottom_border{
+    box-sizing: border-box;
+    border-bottom: 5px solid rgb(255, 0, 0);
+    border-radius: 10px;
 }

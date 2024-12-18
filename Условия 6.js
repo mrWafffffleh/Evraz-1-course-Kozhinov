@@ -84,20 +84,41 @@ function button_left(){
     }
     else if(choose == 1){
         let posgold = gold.getBoundingClientRect()
-        gold.style.left = posgold.left - count + "px"
-        if(posgold.left == 0){
-            gold.style.left = 0px
+        let posgold2 = posgold.left - count
+        if(posgold2 <= 0) {
+            gold.classList.add("left_border")
+            gold.style.left = 0
 
+        }
+        else{
+            gold.style.left = posgold.left - count + "px"
+            gold.classList.remove("left_border")
         }
     }
     else if(choose == 2){
         let posblue = blue.getBoundingClientRect()
-        blue.style.left = posblue.left - count + "px"
+        let posblue2 = posblue.left - count
+        if(posblue2 <= 0){
+            blue.classList.add("left_border")
+            blue.style.left = 0
+        }
+        else{
+            blue.style.left = posblue.left - count + "px"
+            blue.classList.remove("left_border")
+        }
 
     }
     else if(choose == 3){
         let posorange = orange.getBoundingClientRect()
-        orange.style.left = posorange.left - count + "px"
+        let posorange2 = posorange.left - count
+        if(posorange2 <= 0){
+            orange.classList.add("left_border")
+            orange.style.left = 0
+        }
+        else{
+            orange.style.left = posorange.left - count + "px"
+            orange.classList.remove("left_border")
+        }
 
     }
 }
@@ -107,7 +128,16 @@ function button_right(){
     }
     else if(choose == 1){
         let posgold = gold.getBoundingClientRect()
-        gold.style.left = posgold.left + count + "px"
+        if(posgold.right < 0){
+            gold.classList.add("right_border")
+            gold.classList.remove("left_border")
+            gold.style.left = 100 + "%"
+        }
+        else{
+            gold.style.left = posgold.left + count + "px"
+            gold.classList.remove("right_border")
+        }
+
 
     }
     else if(choose == 2){
@@ -127,17 +157,43 @@ function button_up(){
     }
     else if(choose == 1){
         let posgold = gold.getBoundingClientRect()
-        gold.style.top = posgold.top - count + "px"
+        let posgold2 = posorange.top - count
+        if(posgold2 <= 0){
+            gold.classList.add("top_border")
+            gold.style.top = 0
+        }
+        else{
+            gold.style.top = posgold.top - count + "px"
+            gold.classList.remove("top_border")
+        }
 
     }
     else if(choose == 2){
         let posblue = blue.getBoundingClientRect()
-        blue.style.top = posblue.top - count + "px"
+        let posblue2 = posblue.left - count
+        if(posblue2 <= 0){
+            blue.classList.add("top_border")
+            blue.style.top = 0
+        }
+        else{
+            blue.style.top = posblue.top - count + "px"
+            blue.classList.remove("top_border")
+        }
+
 
     }
     else if(choose == 3){
         let posorange = orange.getBoundingClientRect()
-        orange.style.top = posorange.top - count + "px"
+        let posorange2 = posorange - count
+        if(posorange2 <= 0){
+            orange.classList.add("top_border")
+            orange.style.top = 0
+        }
+        else{
+            orange.style.top = posorange.top - count + "px"
+            orange.classList.remove("top_border")
+        }
+
 
     }
 }
@@ -171,4 +227,7 @@ function clearall(){
     choose = 0
     step.innerText = " "
     count = 0
+    gold.classList.remove("border")
+    blue.classList.remove("border")
+    orange.classList.remove("border")
 }

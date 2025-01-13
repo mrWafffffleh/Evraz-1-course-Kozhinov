@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+}
+.head-top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    height: 80px;
+}
+.head-top-links {
+    display: flex;
+    flex-direction: row;
+}
+.head-top-links .link {
+    padding: 20px;
+}

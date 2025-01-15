@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+}
+.head {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.htop {
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+}
+.htoplinks {
+    display: flex;
+    flex-direction: row;
+}
+.htoplinks .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+
+}
+.hbottom {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('шаблон 7/images/main_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.htoplogo {
+    padding: 30px;
+}
+.bigtext {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+.littletext {
+    position: absolute;
+    font-size: 30px;
+    top: 60%;
+    left: 36%
+}
+a {
+    text-decoration: none;
+}

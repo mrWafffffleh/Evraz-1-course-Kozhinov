@@ -40,14 +40,64 @@ body {
 .bigtext {
     display: flex;
     justify-content: center;
-    font-size: 30px;
+    font-size: 35px;
 }
 .littletext {
     position: absolute;
-    font-size: 30px;
-    top: 60%;
-    left: 36%
+    font-size: 38px;
+    top: 61%;
+    left: 37%
 }
 a {
     text-decoration: none;
+}
+p {
+    margin-top: 0;
+}
+.htop1 {
+    display: flex;
+    justify-content: space-between;
+    height: 170px;
+}
+.htoptext {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.htoptext .htopbigtext {
+    display: flex;
+    color: #bdbdbd;
+    font-size: 50px;
+}
+.htoptext .htoplittletext {
+    color: #bdbdbd;
+    font-size: 20px;
+}
+.bottom{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("шаблон 7/images/slider_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 90px;
+}
+.head1 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.bottomtext{
+    width: 65vw;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: white;
 }

@@ -57,7 +57,8 @@ p {
 .htop1 {
     display: flex;
     justify-content: space-between;
-    height: 170px;
+    height: 130px;
+    padding-top: 50px;
 }
 .htoptext {
     width: 100vw;
@@ -65,7 +66,6 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 .htoptext .htopbigtext {
     display: flex;
@@ -86,7 +86,7 @@ p {
     background-image: url("шаблон 7/images/slider_bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 90px;
+    margin: 50px 90px;
 }
 .head1 {
     height: 100vh;
@@ -99,5 +99,33 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-color: white;
+    border: 5px solid white;
+    background-color: rgba(255, 255, 255, 0.53);
+    font-size: 50px;
+    color: white;
+}
+.button-up {
+    display: flex;
+    justify-content: right;
+    /*position: fixed;*/
+}
+.head3 {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+}
+.h3top {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    left: 30px
+}
+.h3top .top3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    border-right: 3px solid #bdbdbd;
+    border-bottom: 3px solid #bdbdbd;
+
 }

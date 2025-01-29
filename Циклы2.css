@@ -1,4 +1,4 @@
-.all {
+.alll {
     display: flex;
     flex-direction: column;
     margin: 10px;
@@ -14,7 +14,7 @@
     margin-bottom: 15px;
 }
 .input {
-    margin-bottom: 15px;
+    margin-bottom: 2px;
 }
 .space {
     margin-bottom: 15px;
@@ -26,4 +26,10 @@
 .towns {
     color: red;
     text-decoration: underline;
+}
+#number {
+    margin-bottom: 15px;
+}
+#number1 {
+    margin-bottom: 15px;
 }

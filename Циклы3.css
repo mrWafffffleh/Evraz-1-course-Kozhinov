@@ -1,0 +1,23 @@
+#all {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.red {
+    display: flex;
+    background-color: #ce5c5b;
+    width: 200px;
+    height: 200px;
+}
+.blue {
+    display: flex;
+    background-color: #00bffe;
+    width: 200px;
+    height: 200px;
+}
+.green {
+    display: flex;
+    background-color: #aeff30;
+    width: 200px;
+    height: 200px;
+}

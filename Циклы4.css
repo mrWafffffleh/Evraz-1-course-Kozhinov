@@ -1,0 +1,10 @@
+.block {
+    margin-bottom: 10px;
+    display: flex;
+}
+.block button {
+    margin-right: 10px;
+}
+.chet {
+    color: red;
+}

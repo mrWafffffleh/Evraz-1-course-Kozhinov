@@ -34,16 +34,19 @@ function add6(){
         div.innerText = div.innerText + " " + i
     }
 }
-function add7(){
-    for(let i = 1; i <= 20; i++){
+let row = document.getElementById('row7')
+function add7() {
+    for (let i = 1; i <= 20; i++) {
+        let number = document.createElement('span')
         if(i % 2 == 0){
-            let div = document.getElementById("row7")
-            div.classList.add("chet")
-            div.innerText = div.innerText + " " + i
+            number.classList.add('chet')
+            number.innerText = i + " "
+            row.append(number)
         }
-        else{
-            let div = document.getElementById("row7")
-            div.innerText = div.innerText + " " + i
+        else {
+            number.classList.add('nechet')
+            number.innerText = i + " "
+            row.append(number)
         }
     }
 }

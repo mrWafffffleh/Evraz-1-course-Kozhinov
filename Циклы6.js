@@ -26,11 +26,17 @@ function numlist() {
         let list = document.getElementById("lists")
         let ol = document.createElement("ol")
         list.append(ol)
-        a.forEach((item) => {
+        // a.forEach((item) => {
+        //     let liElement = document.createElement("li")
+        //     liElement.innerText = item
+        //     ol.append(liElement)
+        // })
+
+        for(let i = 0; i < a.length; i++){
             let liElement = document.createElement("li")
-            liElement.innerText = item
+            liElement.innerText = a[i]
             ol.append(liElement)
-        })
+        }
     }
 }
 function nnlist() {
@@ -41,11 +47,16 @@ function nnlist() {
         let list = document.getElementById("lists")
         let ul = document.createElement("ul")
         list.append(ul)
-        a.forEach((item) => {
+        // a.forEach((item) => {
+        //     let liElement = document.createElement("li")
+        //     liElement.innerText = item
+        //     ul.append(liElement)
+        // })
+        for(let i = 0; i < a.length; i++){
             let liElement = document.createElement("li")
-            liElement.innerText = item
+            liElement.innerText = a[i]
             ul.append(liElement)
-        })
+        }
     }
 
 }

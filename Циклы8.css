@@ -1,0 +1,28 @@
+.all {
+    display: flex;
+    flex-direction: row;
+}
+#right {
+    margin-left: 10vw;
+}
+#input {
+    margin-bottom: 1vh;
+}
+#text {
+    margin-bottom: 1vh;
+}
+#input1 {
+    margin-bottom: 1vh;
+}
+#input2 {
+    margin-bottom: 1vh;
+}
+#input1 {
+    width: 392px;
+}
+#input2{
+    width: 392px;
+}
+#button button {
+    width: 400px;
+}

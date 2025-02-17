@@ -21,6 +21,7 @@ function chooseel() {
     }
     else if(input2.value > a.length - 1){
         alert("Нет элемента с таким индексом!")
+        input2.value = ""
     }
     else{
         let li = document.createElement("li")

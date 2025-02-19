@@ -7,7 +7,7 @@
 </head>
 <body>
 <div id="left">
-    <div><b>Форма добавления товара</b></div>
+    <div class="text"><b>Форма добавления товара</b></div>
     <div class="block">
         Название
         <input type="text" placeholder="Прим.: Гаечные ключи" id="input-name">
@@ -23,7 +23,51 @@
             <option value="clothes">Одежда</option>
         </select>
     </div>
-    <div class="block"></div>
+    <div class="block">
+        Cтоимость, руб
+        <input type="number" id="price">
+    </div>
+    <div class="block">
+        Количество
+        <input type="number" id="amount">
+    </div>
+    <div class="block">
+        Есть скидка?
+        <span>
+            <input type="radio" id="yes" value="yes" name="sale" onchange="addlist(true)">
+            Да
+            <input type="radio" id="no" value="no" checked name="sale" onchange="addlist(false)">
+            Нет
+        </span>
+    </div>
+    <div class="ghost" id="saleblock">
+        Скидка, %
+        <input type="number" id="salenum">
+    </div>
+    <div class="block">
+        Особенности
+        <span>
+            <input type="checkbox" name="features" id="B/U" value="B/U">
+            Б/У
+        </span>
+        <span>
+            <input type="checkbox" name="features" id="fragile" value="fragile">
+            Хрупкий
+        </span>
+    </div>
+    <div class="block">
+        Описание
+        <textarea name="description" id="desc" cols="30" rows="5"></textarea>
+    </div>
+    <div class="block">
+        <button onclick="addcart()">Добавить товар</button>
+    </div>
+</div>
+<div id="right">
+    <div id="text2"><b>Товары</b></div>
+    <div>
+
+    </div>
 </div>
 <script src="Товары.js"></script>
 </body>

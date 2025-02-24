@@ -57,7 +57,7 @@
     </div>
     <div class="block">
         Описание
-        <textarea name="description" id="desc" cols="30" rows="5"></textarea>
+        <textarea name="description" id="desc" cols="30" rows="5" placeholder="Добавьте описание"></textarea>
     </div>
     <div class="block">
         <button onclick="addcart()">Добавить товар</button>
@@ -65,8 +65,33 @@
 </div>
 <div id="right">
     <div id="text2"><b>Товары</b></div>
-    <div>
-
+    <div id="cart">
+        <div id="cart-name" class="cartc">
+            Гаечный ключ
+        </div>
+        <div id="cart-cat" class="cartc">
+            Товары для дома
+        </div>
+        <div id="cart-desc" class="cartc">
+            Крутой
+        </div>
+        <div id="bottom-cart" class="cartc">
+            <span>
+                Цена:
+            </span>
+            <span id="cart-price">
+                1000 руб.
+            </span>
+            <span>
+                Количество:
+            </span>
+            <span id="cart-amount">
+                5
+            </span>
+        </div>
+        <div id="sale" class="ghost">
+            100 руб.
+        </div>
     </div>
 </div>
 <script src="Товары.js"></script>

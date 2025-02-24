@@ -10,13 +10,51 @@
     width: 30vw;
     margin-left: 20px;
     margin-top: 30px;
+    position: absolute;
 }
 .text {
     margin-left: 9vw;
     margin-bottom: 20px;
 }
 #right {
-    margin-left: 50vw;
+    position: absolute;
+    left: 50vw;
+    top: 30px;
+}
+#cart {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(128, 128, 128, 0.26);
     margin-top: 30px;
-    width: 30vw;
+    border-radius: 20px;
+}
+.cross {
+    text-decoration: line-through;
+}
+#sale {
+    margin-left: 48px;
+}
+#cart-name {
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 20px;
+}
+#cart-cat {
+    margin-bottom: 20px;
+    font-style: italic;
+}
+#cart-desc {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cartc {
+    margin-left: 50px;
+    margin-right: 100px;
+}
+#bottom-cart {
+    margin-bottom: 20px;
+}
+#text2 {
+    margin-left: 7vw;
 }

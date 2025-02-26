@@ -5,7 +5,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="Товары.css">
 </head>
-<body>
+<body id="body">
 <div id="left">
     <div class="text"><b>Форма добавления товара</b></div>
     <div class="block">
@@ -15,12 +15,12 @@
     <div class="block">
         Категория
         <select name="category" id="selection">
-            <option value="">--Выберите один из вариантов--</option>
-            <option value="products">Продукты</option>
-            <option value="tech">Техника</option>
-            <option value="jewellery">Украшения</option>
-            <option value="house">Товары для дома</option>
-            <option value="clothes">Одежда</option>
+            <option selected disabled>--Выберите один из вариантов--</option>
+            <option value="Продукты">Продукты</option>
+            <option value="Техника">Техника</option>
+            <option value="Украшения">Украшения</option>
+            <option value="Товары для дома">Товары для дома</option>
+            <option value="Одежда">Одежда</option>
         </select>
     </div>
     <div class="block">
@@ -35,9 +35,9 @@
         Есть скидка?
         <span>
             <input type="radio" id="yes" value="yes" name="sale" onchange="addlist(true)">
-            Да
+            <label for="yes">Да</label>
             <input type="radio" id="no" value="no" checked name="sale" onchange="addlist(false)">
-            Нет
+            <label for="no">Нет</label>
         </span>
     </div>
     <div class="ghost" id="saleblock">
@@ -65,33 +65,33 @@
 </div>
 <div id="right">
     <div id="text2"><b>Товары</b></div>
-    <div id="cart">
-        <div id="cart-name" class="cartc">
-            Гаечный ключ
-        </div>
-        <div id="cart-cat" class="cartc">
-            Товары для дома
-        </div>
-        <div id="cart-desc" class="cartc">
-            Крутой
-        </div>
-        <div id="bottom-cart" class="cartc">
-            <span>
-                Цена:
-            </span>
-            <span id="cart-price">
-                1000 руб.
-            </span>
-            <span>
-                Количество:
-            </span>
-            <span id="cart-amount">
-                5
-            </span>
-        </div>
-        <div id="sale" class="ghost">
-            100 руб.
-        </div>
+<!--    <div id="cart">-->
+<!--        <div id="cart-name" class="cartc">-->
+<!--            Гаечный ключ-->
+<!--        </div>-->
+<!--        <div id="cart-cat" class="cartc">-->
+<!--            Товары для дома-->
+<!--        </div>-->
+<!--        <div id="cart-desc" class="cartc">-->
+<!--            Крутой-->
+<!--        </div>-->
+<!--        <div id="bottom-cart" class="cartc">-->
+<!--            <span>-->
+<!--                Цена:-->
+<!--            </span>-->
+<!--            <span id="cart-price">-->
+<!--                1000 руб.-->
+<!--            </span>-->
+<!--            <span>-->
+<!--                Количество:-->
+<!--            </span>-->
+<!--            <span id="cart-amount">-->
+<!--                5-->
+<!--            </span>-->
+<!--        </div>-->
+<!--        <div id="sale" class="ghost">-->
+<!--            100 руб.-->
+<!--        </div>-->
     </div>
 </div>
 <script src="Товары.js"></script>

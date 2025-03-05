@@ -1,73 +1,74 @@
-.ghost {
-    display: none;
+body {
+    display: flex;
+    flex-direction: row;
 }
-.block {
+body > div {
+    width: 50%;
+}
+.left, .right {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+.left, .block {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+#saleblock {
+    display: none !important;
+}
+.tovar {
+    background-color: #f0f0f0;
+    width: 500px;
+    padding: 25px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 1px solid #b0b0b0;
+    position: relative;
     margin-bottom: 10px;
 }
-#left {
-    width: 30vw;
-    margin-left: 20px;
-    margin-top: 30px;
-    position: absolute;
-}
-.text {
-    margin-left: 9vw;
-    margin-bottom: 20px;
-}
-#right {
-    position: absolute;
-    left: 50vw;
-    top: 30px;
-}
-.cart {
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(128, 128, 128, 0.26);
-    margin-top: 30px;
-    border-radius: 20px;
-    position: relative;
-}
-.cross {
-    text-decoration: line-through;
-}
-.sale {
-    margin-left: 100px !important;
-    margin-bottom: 20px;
-}
-.cart-name {
-    margin-top: 30px;
+
+.tovar-name {
+    font-size: 24px;
     font-weight: bold;
-    font-size: 20px;
 }
-.cart-cat {
-    margin-bottom: 20px;
+
+.tovar-category,
+.tovar-specials {
     font-style: italic;
 }
-.cart-desc {
+
+.tovar-description {
+    margin-top: 10px;
     margin-bottom: 20px;
+}
+
+.tovar-price-count {
     display: flex;
-    flex-wrap: wrap;
 }
-.cart > div {
-    margin-left: 50px;
-    margin-right: 100px;
+
+.tovar-price {
+    margin-right: 40px;
+    display: flex;
 }
-.bottom-cart {
-    margin-bottom: 20px;
+
+.tovar-price-old {
+    text-decoration: line-through;
 }
-.bottom-cart1 {
-    margin-bottom: 5px;
-}
-#text2 {
-    margin-left: 7vw;
-}
-.button {
+
+.tovar-close {
     position: absolute;
+    top: 10px;
+    right: 20px;
+    box-sizing: border-box;
     border-radius: 50%;
-    margin-top: 20px;
-    margin-right: 20px;
-    right: 10px;
-    top:10px
+    border: 1px solid transparent;
+    padding: 5px 7px;
+}
+
+.tovar-close:hover {
+    border: 1px solid black;
+    cursor: pointer;
 }

@@ -6,92 +6,84 @@
     <link rel="stylesheet" href="Товары.css">
 </head>
 <body id="body">
-<div id="left">
-    <div class="text"><b>Форма добавления товара</b></div>
+<div class="left">
+    <div class="form"><h3>Форма добавления товара</h3></div>
     <div class="block">
-        Название
+        <div>Название</div>
         <input type="text" placeholder="Прим.: Гаечные ключи" id="input-name">
     </div>
     <div class="block">
-        Категория
+        <div>Категория</div>
         <select name="category" id="selection">
             <option selected disabled>--Выберите один из вариантов--</option>
-            <option value="Продукты">Продукты</option>
-            <option value="Техника">Техника</option>
-            <option value="Украшения">Украшения</option>
-            <option value="Товары для дома">Товары для дома</option>
-            <option value="Одежда">Одежда</option>
+            <option value="Products">Продукты</option>
+            <option value="Technic">Техника</option>
+            <option value="Jewellery">Украшения</option>
+            <option value="House">Товары для дома</option>
+            <option value="Clothes">Одежда</option>
         </select>
     </div>
     <div class="block">
-        Cтоимость, руб
-        <input type="number" id="price">
+        <div>Cтоимость, руб</div>
+        <input type="number" id="price" value="0">
     </div>
     <div class="block">
-        Количество
-        <input type="number" id="amount">
+        <div>Количество</div>
+        <input type="number" value="0" id="amount">
     </div>
     <div class="block">
-        Есть скидка?
-        <span>
+        <div>Есть скидка?</div>
+        <div>
             <input type="radio" id="yes" value="yes" name="sale" onchange="addlist(true)">
             <label for="yes">Да</label>
             <input type="radio" id="no" value="no" checked name="sale" onchange="addlist(false)">
             <label for="no">Нет</label>
-        </span>
+        </div>
     </div>
-    <div class="ghost" id="saleblock">
-        Скидка, %
+    <div class="block" id="saleblock">
+        <div>Скидка, %</div>
         <input type="number" id="salenum">
     </div>
     <div class="block">
-        Особенности
-        <span>
+        <div>Особенности</div>
+        <div>
             <input type="checkbox" name="features" id="B/U" value="B/U">
-            Б/У
-        </span>
-        <span>
+            <label for="B/U">Б/У</label>
+        </div>
+        <div>
             <input type="checkbox" name="features" id="fragile" value="fragile">
-            Хрупкий
-        </span>
+            <label for="fragile">Хрупкий</label>
+        </div>
     </div>
     <div class="block">
-        Описание
+        <div>Описание</div>
         <textarea name="description" id="desc" cols="30" rows="5" placeholder="Добавьте описание"></textarea>
     </div>
     <div class="block">
         <button onclick="addcart()">Добавить товар</button>
     </div>
 </div>
-<div id="right">
-    <div id="text2"><b>Товары</b></div>
-<!--    <div id="cart">-->
-<!--        <div id="cart-name" class="cartc">-->
-<!--            Гаечный ключ-->
-<!--        </div>-->
-<!--        <div id="cart-cat" class="cartc">-->
-<!--            Товары для дома-->
-<!--        </div>-->
-<!--        <div id="cart-desc" class="cartc">-->
-<!--            Крутой-->
-<!--        </div>-->
-<!--        <div id="bottom-cart" class="cartc">-->
-<!--            <span>-->
-<!--                Цена:-->
-<!--            </span>-->
-<!--            <span id="cart-price">-->
-<!--                1000 руб.-->
-<!--            </span>-->
-<!--            <span>-->
-<!--                Количество:-->
-<!--            </span>-->
-<!--            <span id="cart-amount">-->
-<!--                5-->
-<!--            </span>-->
-<!--        </div>-->
-<!--        <div id="sale" class="ghost">-->
-<!--            100 руб.-->
-<!--        </div>-->
+<div class="right">
+    <div><h3>Товары</h3></div>
+    <div id="list">
+        <div class="tovar">
+            <div class="tovar-name">Название</div>
+            <div class="tovar-category">Категории</div>
+            <div class="tovar-specials">Особенности: </div>
+            <div class="tovar-description">Описание</div>
+            <div class="tovar-price-count">
+                <!--<div class="tovar-price">Цена: 1000 руб.</div>-->
+                <div class="tovar-price">
+                    <div>Цена: </div>
+                    <div>
+                        <div class="tovar-price-old">1000 руб.</div>
+                        <div>1000 руб.</div>
+                    </div>
+                </div>
+                <div class="count">Количество: 1000 шт.</div>
+            </div>
+            <div class="tovar-close">X</div>
+        </div>
     </div>
 </div>
 <script src="Товары.js"></script>

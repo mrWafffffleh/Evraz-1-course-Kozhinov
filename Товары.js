@@ -7,6 +7,11 @@ let right = document.getElementById("right")
 let listDom = document.getElementById("list")
 let inputSale = document.getElementById('salenum')
 let inputPickup = document.getElementById('pick-up-point')
+let buttonAdd = document.getElementById('button-add')
+let buttonEdit = document.getElementById('button-edit')
+let form = document.getElementById('form')
+let titleAdd = document.getElementById('titleAdd')
+let titleEdit = document.getElementById('titleEdit')
 let inputColour = document.getElementById('select-colour')
 let categories = {
     'Products': 'Продукты',
@@ -30,40 +35,61 @@ let specialObj = {
     'B/U': 'Б/У',
     'fragile': 'Хрупкий'
 }
+let products = []
+let curEdProd = null
 
 function addlist(show) {
     let sale = document.getElementById("saleblock")
     if (show) {
         sale.style.setProperty('display', 'flex', 'important')
-    } else {
+    }
+    else {
         sale.style.setProperty('display', 'none', 'important')
     }
 }
-
-function addcart() {
+function addTovar(){
     let saleCh = document.querySelector('input[name=sale]:checked')
-
+    let sp = []
+    let spec = document.querySelectorAll('input[name=features]:checked')
+    for (let i = 0; i < spec.length; i++) {
+        sp.push(spec[i].value)
+    }
+    let product = {
+        name: inputName.value,
+        category: inputCategory.value,
+        specials: sp,
+        description: inputDescripton.value,
+        price: inputPrice,
+        amount: inputAmount,
+        saleCh: saleCh.value,
+        sale: inputSale.value,
+        pickup: inputPickup.value,
+        colour: inputColour.value
+    }
+    let prodInd = products.push(product) - 1
+    addcart(product, prodInd)
+}
+function addcart(product, prodInd) {
     let cardT = document.createElement("div")
     cardT.classList.add("tovar")
     let price = ``
-    if (saleCh.value == 'yes') {
-        let num = +inputPrice.value * +inputSale.value / 100
-        let num1 = +inputPrice.value - num
+    if (product.saleCh == 'true') {
+        let num = +product.price * +product.sale / 100
+        let num1 = +product.price - num
         price = ` <div class="tovar-price">
                     <div>Цена: </div>
                     <div>
-                        <div class="tovar-price-old">Цена: ${inputPrice.value} руб.</div>
+                        <div class="tovar-price-old">Цена: ${product.price} руб.</div>
                         <div>${num1} руб.</div>
                     </div>
                 </div>`
-    } else {
-        price = `<div class="tovar-price">Цена: ${inputPrice.value}</div>`
+    }
+    else {
+        price = `<div class="tovar-price">Цена: ${product.price}</div>`
     }
     let specials = ``
-    let spec = document.querySelectorAll('input[name=features]:checked')
-    for (let i = 0; i < spec.length; i++) {
-        // console.log(specials[i].value, specialsObj[specials[i].value]);
-        specials += ' ' + specialObj[spec[i].value];
+    for(let i = 0; i < product.specials.length; i++){
+        specials += ' ' + specialObj[product.specials[i].value];
     }
     let payment = document.querySelector("input[name=payment]:checked");
     let pay = ``;
@@ -72,20 +98,87 @@ function addcart() {
     } else {
         pay = 'наличными'
     }
-    let card = `<div class="tovar-name">${inputName.value}</div>
-            <div class="tovar-category">${categories[inputCategory.value]}</div>
+
+
+    let card = `<div class="tovar-name">${product.name}</div>
+            <div class="tovar-category">${categories[product.category]}</div>
             <div class="tovar-specials">${specials}</div>
-            <div class="tovar-description">${inputDescripton.value}</div>
+            <div class="tovar-description">${product.description}</div>
             <div class="tovar-price-count">
                 ${price}
-                <div class="count">Количество: ${inputAmount.value}</div>
+                <div class="count">Количество: ${product.amount}</div>
             </div>
-            <div class="tovar-description">Пункт выдачи: ${inputPickup.value}</div>
+            <div class="tovar-description">Пункт выдачи: ${product.pickup}</div>
             <div class="tovar-category">Оплата ${pay}</div>
-            <div class="tovar-specials">Цвет: ${colors[inputColour.value]}</div>
-            <div class="tovar-close">X</div>`
+            <div class="tovar-specials">Цвет: ${colors[product.colour]}</div>
+            <div class="tovar-close"">X</div>
+            <div class="tovar-edit">
+                <button onclick="edit(${prodInd})">Редактировать</button>
+            </div>`
     cardT.innerHTML = card
     listDom.append(cardT)
+    event.preventDefault()
+    form.reset()
 }
+function edit(prodInd){
+    curEdProd = prodInd
+    buttonAdd.classList.add('hide')
+    buttonEdit.classList.remove('hide')
+    titleEdit.classList.remove('hide')
+    titleAdd.classList.add('hide')
+
+    let product = products[prodInd]
+    inputName.value = product.name
+    inputPrice.value = product.price
+    inputAmount.value = product.amount
+    inputDescripton.value = product.description
+    inputCategory.value = product.category
+
+    let radio = document.querySelector(`input[name=sale][value=${product.saleCh}]`)
+    if(radio){
+        radio.checked = true
+    }
+    for(let i = 0; i < product.specials.length; i++){
+        let spVal = product.specials[i]
+        let checkbox = document.querySelector(`input[name=features][value=${spVal}]`)
+        if(checkbox){
+            checkbox.checked = true
+        }
+    }
+}
+function editTovar(){
+    event.preventDefault()
+    buttonAdd.classList.remove('hide')
+    buttonEdit.classList.add('hide')
+    titleEdit.classList.add('hide')
+    titleAdd.classList.remove('hide')
+    let product = products[curEdProd]
+    curEdProd = null
+    let saleCh = document.querySelector(`input[name=sale]:checked`)
+    let spVal = []
+    let specials = document.querySelectorAll(`input[name=features]:checked`)
+    for(let i = 0; i < specials.length; i++){
+        spVal.push(specials[i].value);
+    }
+    product.name = inputName.value
+    product.category = inputCategory.value
+    product.specials = spVal;
+    product.description = inputDescripton.value;
+    product.saleCh = saleCh.value;
+    product.sale = inputSale.value;
+    product.price = inputPrice.value;
+    product.amount = inputAmount.value;
+    event.preventDefault();
+    form.reset();
+    buildAg();
+}
+function buildAg(){
+    listDom.innerText = ''
+    for(let i = 0; i < products.length; i++){
+        let product = products[i]
+        addcart(product, i)
+    }
+}
+
 
 

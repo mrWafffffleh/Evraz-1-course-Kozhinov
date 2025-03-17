@@ -72,3 +72,6 @@ body > div {
     border: 1px solid black;
     cursor: pointer;
 }
+.hide {
+    display: none !important;
+}

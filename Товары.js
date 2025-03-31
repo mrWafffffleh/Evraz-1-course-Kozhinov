@@ -73,6 +73,7 @@ function addTovar(){
         pickup: inputPickup.value,
         colour: inputColour.value,
         pay: pay
+
     }
     let prodInd = products.push(product) - 1
     addcart(product, prodInd)
@@ -142,8 +143,11 @@ function edit(prodInd){
     payment = product.pay
 
     let radio = document.querySelector(`input[name=sale][value=${product.saleCh}]`)
+    let sale = document.getElementById("saleblock")
     if(radio){
         radio.checked = true
+        sale.style.setProperty('display', 'flex', 'important')
+        sale.value = product.sale
     }
     for(let i = 0; i < product.specials.length; i++){
         let spVal = product.specials[i]
@@ -199,7 +203,8 @@ function buildAg(){
 }
 function clearCart(prodInd){
     curProd = prodInd
-
+    products.splice(prodInd, 1)
+    buildAg()
 }
 
 

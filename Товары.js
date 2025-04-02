@@ -77,6 +77,7 @@ function addTovar(){
     }
     let prodInd = products.push(product) - 1
     addcart(product, prodInd)
+    window.localStorage.setItem('tovar', JSON.stringify(products))
 }
 function addcart(product, prodInd) {
     let cardT = document.createElement("div")
@@ -102,7 +103,6 @@ function addcart(product, prodInd) {
     }
 
 
-
     let card = `<div class="tovar-name">${product.name}</div>
             <div class="tovar-category">${categories[product.category]}</div>
             <div class="tovar-specials">${specials}</div>
@@ -122,7 +122,6 @@ function addcart(product, prodInd) {
     sale.style.setProperty('display', 'none', 'important')
     cardT.innerHTML = card
     listDom.append(cardT)
-    event.preventDefault()
     form.reset()
 }
 function edit(prodInd){
@@ -193,6 +192,7 @@ function editTovar(){
     event.preventDefault();
     form.reset();
     buildAg();
+    window.localStorage.setItem('tovar', JSON.stringify(products))
 }
 function buildAg(){
     listDom.innerText = ''
@@ -202,9 +202,12 @@ function buildAg(){
     }
 }
 function clearCart(prodInd){
-    curProd = prodInd
     products.splice(prodInd, 1)
+    window.localStorage.setItem('tovar', JSON.stringify(products))
     buildAg()
 }
+
+products = JSON.parse(window.localStorage.getItem('tovar'))
+buildAg()
 
 
